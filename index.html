@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title></title>
+</head>
+<body>
+    <div id="root">
+        <h1>插值语法</h1>
+        <h3>你好！{{address}}</h3>
+        <hr>
+        <h1>指令语法</h1>
+        <!-- v-bind 简写为 ===> : -->
+        <!-- v-bind 绑定函数或者变量 -->
+        <a v-bind:href="url1" x="hello" >百度</a>
+        <a v-bind:href="url2">尚硅谷</a>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+        Vue.config.productionTip = false // 阻止vue 启动时产生 生产提示
+        const x = new Vue({ 
+            el:"#root",
+            data:{
+                name:"尚硅谷",
+                address:"北京",
+                url1:"http://www.baidu.com",
+                url2:"http://www.atguigu.com"
+            }
+        })
+    </script>
+    
+</body>
+</html>
